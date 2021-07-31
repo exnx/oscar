@@ -1,0 +1,36 @@
+<h1 id="iccv2021-supplementary-materials">ICCV2021 Supplementary materials</h1>
+<p>This repo contains the demo code to run our proposed Scene Attention Network (SATNet) model.</p>
+<p>Please find the link to code at <a href="link_to_code.txt">link_to_code.txt</a> which also stores a pretrained model.</p>
+<h2 id="requirements">Requirements</h2>
+<p>Docker version &gt;= 19.03</p>
+<p>Nvidia driver &gt;= 418.39</p>
+<p>Nvidia-docker2 &gt;= 2.0.3</p>
+<p>A GPU with compute capability &gt;= 3.0 and at least 8GB GPU memory.</p>
+<h2 id="how-to">How to</h2>
+<p>First, start the docker container:</p>
+<pre><code>docker run --rm -it --runtime=nvidia anonymous0submission/iccv2021:latest bash</code></pre>
+<h3 id="run-inference-on-an-image">Run inference on an image:</h3>
+<pre><code>python inference.py -i examples/original.jpg -w weight/best.pt</code></pre>
+<p>This should output a 64-bit hash code.</p>
+<h3 id="run-the-demo">Run the demo</h3>
+<pre><code>python demo.py</code></pre>
+<p>This demo loads an original image <a href="examples/original.jpg">examples/original.jpg</a>, a benign-transformed version <a href="examples/benign.jpg">examples/benign.jpg</a> and a manipulated version <a href="examples/manipulated.jpg">examples/manipulated.jpg</a> of that image; then compare the Hamming distance of the original-benign and original-manipulated pairs.</p>
+<p>The output should look like this:</p>
+<pre><code>Hamming (original.jpg, benign.jpg): 3
+Hamming (original.jpg, manipulated.jpg): 22</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Original</th>
+<th style="text-align: center;">Benign transform</th>
+<th style="text-align: center;">Manipulated</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><kbd><img src="examples/original.jpg" height="300px"/></kbd></td>
+<td style="text-align: center;"><img src="examples/benign.jpg" height="300px"/></td>
+<td style="text-align: center;"><img src="examples/manipulated.jpg" height="300px"/></td>
+</tr>
+</tbody>
+</table>

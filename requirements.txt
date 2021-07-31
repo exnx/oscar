@@ -1,0 +1,12 @@
+setuptools >= 41.0.0
+h5py >= 2.9.0
+h5py-cache >= 1.0
+opencv-python >= 4.2.0
+pandas >= 0.24.1
+scikit-image >= 0.15.0
+tqdm >= 4.43.0
+reportlab >= 3.5.23
+numpy >= 1.16.4
+scipy >= 1.4.1
+requests >= 2.22.0
+cython
