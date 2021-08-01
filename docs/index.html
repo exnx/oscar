@@ -3,15 +3,16 @@ layout: default
 ---
 
 <h1 id="Title">OSCAR-Net: Object-centric Scene Graph Attention for Image Attribution</h1>
+
+<td style="text-align: center;"><kbd><img src="examples/ex0.png" height="300px"/></kbd></td>
+<p><b>Figure 1.</b> Seeing is not always believing.  We propose OSCAR-Net - an image hashing network for matching images circulatingonline to a trusted database, in order to fight visual misinformation.  OSCAR-Net hashes are invariant to benign ‘non-editorial’ transformations (e.g. warping, flipping, padding left column) but sensitive to subtle manipulation of objects (middle column) in images.  OSCAR-Net learns to ignore the former but pays attention (right column) to the latter.</p>
+
 <h3>TLDR;</h3>
 <p>We present highlights from our ICCV 2021 paper on fighting visual misinformation using a novel tamper-sensitive hashing algorithm.  Our object-centric model decomposes an image into a scene graph of objects and object relationships, and uses attention to explicitly capture subtle manipulations meant to mislead users.
     
 <p>Our code can be found <a href="https://github.com/exnx/oscar">here.</a> Our arxiv paper will be released shortly.</p>
 <h3>Abstract</h3>
 <p>Images tell powerful stories but cannot always be trusted.  Matching images back to trusted sources (attribution) enables users to make a more informed judgment of the images they encounter online.  We propose a robust image hashing algorithm to perform such matching.  Our hash is sensitive to manipulation of subtle, salient visual details that can substantially change the story told by an image.  Yet the hash is invariant to benign transformations (changes in quality, codecs, sizes, shapes, etc.) experienced by images during online redistribution.  Our key contribution is OSCAR-Net (Object-centric SCene graph Attention for image attRibution); a robust image hashing model inspired by recent successes of Transformers in the visual domain.  OSCAR-Net constructs a scene graph representation that attends to fine-grained change of every object’s visual appearance and their spatial relationships.  The network is trained via contrastive learning on a dataset of original and manipulated images yielding a state of the art image hash for content fingerprinting that scales to millions of images.</p>
-
-<td style="text-align: center;"><kbd><img src="examples/ex0.png" height="300px"/></kbd></td>
-<p><b>Figure 1.</b> Seeing is not always believing.  We propose OSCAR-Net - an image hashing network for matching images circulatingonline to a trusted database, in order to fight visual misinformation.  OSCAR-Net hashes are invariant to benign ‘non-editorial’ transformations (e.g. warping, flipping, padding left column) but sensitive to subtle manipulation of objects (middle column) in images.  OSCAR-Net learns to ignore the former but pays attention (right column) to the latter.</p>
 
 <td style="text-align: center;"><kbd><img src="examples/arch.png" height="300px"/></kbd></td>
 <p><b>Figure 2.</b> Object-centric Scene Graph Attention Network (OSCAR-Net). In <b>A</b>, our object-centric hashing method first decomposes animage into a fully connected scene graph of N detected objects using their appearance (ci), masks (mi) and bounding box geometry (bi).The whole image, N object and N2 relation embeddings are fed into the 3-stream attention-based encoder, comprised of a global CNNbranch FG, an object encoder FO and a relation encoder FR to encode each stream to zg, zo, zr, respectively. A single 64-D embeddingzis created, and passed through asignfunction to create a 64 bit image hash.  In <b>B</b>, we indicate how tampered objects and relations areexplicitly captured in the scene graph and allow for fine-grained manipulations to produce substantially different hash compared to theoriginal hash.</p>
