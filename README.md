@@ -7,26 +7,26 @@ This repo contains the demo code to run our OSCAR-Net model.
 ## Requirements
 <!-- Docker version >= 19.03 -->
 <!-- Nvidia-docker2 >= 2.0.3 -->
-Nvidia driver >= 418.39
-setuptools >= 41.0.0
-h5py >= 2.9.0
-h5py-cache >= 1.0
-opencv-python >= 4.2.0
-pandas >= 0.24.1
-scikit-image >= 0.15.0
-tqdm >= 4.43.0
-reportlab >= 3.5.23
-numpy >= 1.16.4
-scipy >= 1.4.1
-requests >= 2.22.0
-cython
+Nvidia driver >= 418.39  
+setuptools >= 41.0.0  
+h5py >= 2.9.0  
+h5py-cache >= 1.0  
+opencv-python >= 4.2.0  
+pandas >= 0.24.1  
+scikit-image >= 0.15.0  
+tqdm >= 4.43.0  
+reportlab >= 3.5.23  
+numpy >= 1.16.4  
+scipy >= 1.4.1  
+requests >= 2.22.0  
+cython  
 
-A GPU with compute capability >= 3.0 and at least 8GB GPU memory.
+A GPU with compute capability >= 3.0 and at least 8GB GPU memory.  
 
 
 ## Download
 
-Download the `weight` zip from [here](https://drive.google.com/file/d/1kGK-s5M5mLEYuFkGv6GKrp3bB8tWv27s/view?usp=sharing), and put the contents into the `weight` directory.
+Download the `weight` zip from [here](https://drive.google.com/file/d/1kGK-s5M5mLEYuFkGv6GKrp3bB8tWv27s/view?usp=sharing), and put the contents into the project `weight` directory (i.e., replace the `weight` directory).
 
 
 
