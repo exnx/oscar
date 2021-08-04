@@ -1,6 +1,8 @@
 # OSCAR-Net:  Object-centric Scene Graph Attention for Image Attribution
 This repo contains the demo code to run our OSCAR-Net model.  
 
+See our [main website](https://exnx.github.io/oscar/) for project highlights.
+
 We also provide the [dataset IDs (50mb)](https://cvssp.org/data/Flickr25K/tubui/cvpr21wmf/stock4_7M.txt) for the 4.7 million stock images from Adobe.
 
 See Adobe [APIs](https://www.adobe.io/apis/creativecloud/stock/docs.html) on how to retrieve the images.
